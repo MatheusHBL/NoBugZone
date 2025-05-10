@@ -71,7 +71,7 @@ export default function PersonalDataForm() {
     if (!cleanCPF) return 'CPF é obrigatório';
     if (cleanCPF.length !== 11) return 'CPF deve conter 11 dígitos';
     
-    // Verifica se todos os dígitos são iguais (ex: 111.111.111-11)
+    // Verifica se todos os dígitos são iguais
     if (/^(\d)\1+$/.test(cleanCPF)) return 'CPF inválido';
     
     // Validação do primeiro dígito verificador
@@ -213,7 +213,6 @@ export default function PersonalDataForm() {
     const hasErrors = Object.values(newErrors).some(error => error !== '');
     
     if (!hasErrors) {
-      // Mostrar modal de sucesso ao invés de Alert
       setShowSuccessModal(true);
       console.log('Dados do formulário:', formData);
     }

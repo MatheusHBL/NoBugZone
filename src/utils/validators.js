@@ -13,13 +13,10 @@ export const validators = {
     },
   
     validateCPF: (cpf) => {
-      // Implementação completa da validação de CPF
       const cleanCPF = cpf.replace(/\D/g, '');
       
       if (!cleanCPF) return 'CPF é obrigatório';
       if (cleanCPF.length !== 11) return 'CPF deve conter 11 dígitos';
-      
-      // Validação completa do CPF...
       return '';
     },
   
@@ -40,8 +37,6 @@ export const validators = {
     validatePassword: (password) => {
       if (!password) return 'Senha é obrigatória';
       if (password.length < 8) return 'Senha deve ter pelo menos 8 caracteres';
-      
-      // Validações específicas...
       return '';
     },
   };
