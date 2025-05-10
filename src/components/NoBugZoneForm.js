@@ -30,7 +30,7 @@ export default function PersonalDataForm() {
   // Função para formatar o nome (remover caracteres inválidos)
   const formatName = (name) => {
     // Permite apenas letras (incluindo acentuadas), espaços, hífen, ponto e apóstrofo
-    return name.replace(/[^a-zA-ZÀ-ÿ\s\-\.']/g, '');
+    return name.replace(/[^a-zA-ZÀ-ÿ\s\.']/g, '');
   };
 
   // Validações
